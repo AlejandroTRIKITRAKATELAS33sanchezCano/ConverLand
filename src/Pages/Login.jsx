@@ -1,7 +1,9 @@
 import Header from "../Components/Header";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { TextField, Button } from "@mui/material";
 import { validateEmail, validatePassword } from "../constants/formValidations";
 import converLandLogo from '../assets/Logos/converland.png';
+import { Link } from "react-router-dom";
 
 export default function Login() {
 
@@ -33,18 +35,59 @@ export default function Login() {
                         onSubmit={handleSubmit}
                     >
                         {({ isSubmitting }) => (
-                            <Form className="formulario">
-                                <label htmlFor="email">Email:</label>
-                                <Field type="email" name="email" />
-                                <ErrorMessage name="email" component="div" />
-
-                                <label htmlFor="password">Contraseña:</label>
-                                <Field type="password" name="password" />
-                                <ErrorMessage name="password" component="div" />
-
-                                <button type="submit" disabled={isSubmitting}>
+                            <Form className="formulario1">
+                                <Field name="email">
+                                    {({ field }) => (
+                                        <div>
+                                            <TextField
+                                                {...field}
+                                                type="email"
+                                                label="Email"
+                                                variant="outlined"
+                                                fullWidth
+                                                color="oscuro"
+                                                InputLabelProps={{ style: { color: '#07384b' } }} // Cambia el color del label aquí
+                                                InputProps={{
+                                                    style: {
+                                                        backgroundColor: "#CCFDD9", // Cambia el color de fondo aquí
+                                                    },
+                                                }}
+                                            />
+                                            <ErrorMessage name="email" component="div" style={{ color: '#ff0000' }} />
+                                        </div>
+                                    )}
+                                </Field>
+                                <Field name="password">
+                                    {({ field }) => (
+                                        <div>
+                                            <TextField
+                                                {...field}
+                                                type="password"
+                                                label="Contraseña"
+                                                variant="outlined"
+                                                fullWidth
+                                                color="oscuro"
+                                                InputLabelProps={{ style: { color: '#07384b' } }} // Cambia el color del label aquí
+                                                InputProps={{
+                                                    style: {
+                                                        backgroundColor: "#CCFDD9", // Cambia el color de fondo aquí
+                                                    },
+                                                }}
+                                            />
+                                            <ErrorMessage name="password" component="div" style={{ color: '#ff0000' }} />
+                                        </div>
+                                    )}
+                                </Field>
+                                <Button
+                                    type="submit"
+                                    variant="contained"
+                                    color="secundario"
+                                    disabled={isSubmitting}
+                                    fullWidth
+                                    style={{ color: '#07384b', marginTop: '30px' , width: '60%'}} // Cambia el color del texto aquí
+                                >
                                     Ingresar
-                                </button>
+                                </Button>
                             </Form>
                         )}
                     </Formik>

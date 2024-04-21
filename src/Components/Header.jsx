@@ -5,9 +5,9 @@ export default function Header() {
     return (
         <header className="header1">
             <div className="headerNAV">
-                <div className="Logo">
+                <Link to="/" className="Logo">
                     <img src={converlandLogo} alt="ConverLand LOGO" />
-                </div>
+                </Link>
                 <div className="Botonera1">
                     <Link className="Link1">Sobre ConverLand</Link>
                     <Link className="Link1">Explorador Categorías</Link>
@@ -15,9 +15,9 @@ export default function Header() {
                 </div>
             </div>
             <div className="Botonera2">
-                <div className="boton1">
-                    <Link className="Link2">Iniciar Sesión</Link>
-                </div>
+                <Link to="/login" className="boton1">
+                    <Link to="/login" className="Link2">Iniciar Sesión</Link>
+                </Link>
             </div>
         </header>
     )

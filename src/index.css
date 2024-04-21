@@ -21,6 +21,7 @@
   --gradient: linear-gradient(to left, #97BCFD, #CCFDD9, #97BCFD);
 }
 
+/*Estilos Definidos*/
 
 /*Body con Degradado*/
 
@@ -195,15 +196,22 @@ body {
   margin-bottom: 15px;
 }
 
-.formulario{
-  width: 100%;
+.formularioRegistro h3{
+  font-size: 1.5rem;
+  font-family: "Pacifico", cursive;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  color: var(--color-oscuro);
+
+  margin-bottom: 15px;
 }
 
-.formulario label{
-  width: 100%;
+.formulario1{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 35px;
+  text-align: left;
 }
+
+.formulario1 div{
+  margin-bottom: 5px;
+}
+
