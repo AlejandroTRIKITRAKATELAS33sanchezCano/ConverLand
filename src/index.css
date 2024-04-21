@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200;300;400&display=swap');
+/*font-family: "Bebas Neue", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200;300;400&family=Pacifico&display=swap');
+
+/*Cursiva* font-family: "Pacifico", cursive;*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/*Paleta de colores y otras cosas*/
+:root {
+  --color-principal: #CAF0FF;
+  --color-secundario: #BDA6C4;
+  --color-fuerte: #97BCFD;
+  --color-claro: #CCFDD9;
+  --color-oscuro: #07384b;
+  --gradient: linear-gradient(to left, #97BCFD, #CCFDD9, #97BCFD);
+}
+
+
+/*Body con Degradado*/
+
+body {
+  background: var(--gradient);
+  background-size: 200% 100%;
+  animation: gradientAnimation 10s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/*Header*/
+
+.header1 {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--color-principal);
+  border-bottom: 2px solid var(--color-oscuro);
+}
+
+.headerNAV {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.Logo {
+  height: 100%;
+}
+
+.Logo img {
+  height: 60px;
+  margin: 10%;
+}
+
+.Botonera1 {
+  margin: 0 3%;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Botonera2 {
+  width: 10%;
+}
+
+.Link1 {
+  font-size: 1.5rem;
+
+  color: var(--color-oscuro);
+  text-decoration: none;
+
+  transition: all 0.5s;
+}
+
+.Link1:hover {
+  color: var(--color-secundario);
+}
+
+.boton1 {
+  border: solid var(--color-oscuro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 60px;
+  width: 110px;
+
+  border-radius: 20px;
+
+  background-color: var(--color-claro);
+  color: var(--color-oscuro);
+  transition: all 0.5s;
+}
+
+.boton1:hover {
+  background-color: var(--color-oscuro);
+  border: solid var(--color-claro);
+
+  color: var(--color-claro);
+}
+
+.Link2 {
+  text-decoration: none;
+  color: var(--color-oscuro);
+  font-size: 1.1rem;
+
+  transition: all 0.5s;
+}
+
+.Link2:hover {
+  color: var(--color-claro);
+}
+
+/*Registro*/
+
+.ContenedorInfoForm{
+
+  margin-top: 3%;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  align-items: center;
+}
+
+.InformacionRegistro{
+  width: 60%;
+  height: 75vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content:center;
+
+  flex-wrap: wrap;
+}
+
+.InformacionRegistro img{
+  transition: all 0.5s;
+}
+
+.InformacionRegistro img:hover{
+  translate: 0px -5%;
+}
+
+.InformacionRegistro h2{
+  color: var(--color-oscuro);
+  font-size: 2.5rem;
+}
+
+.formularioRegistro{
+  width: 35%;
+  height: 75vh;
+
+  margin-right: 5%;
+  text-align: center;
+
+  background-color: var(--color-principal);
+  border: 3px solid var(--color-oscuro);
+  border-radius: 5%;
+
+  padding: 40px 10px;
+}
+
+.formularioRegistro h2{
+  font-size: 2rem;
+  font-family: "Pacifico", cursive;
+
+  color: var(--color-oscuro);
+
+  margin-bottom: 15px;
+}
+
+.formulario{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.formulario label{
+  width: 100%;
+}
