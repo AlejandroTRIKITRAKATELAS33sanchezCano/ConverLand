@@ -25,18 +25,18 @@ export default function Login() {
                 <div className="formularioRegistro">
                     <h2>Inicia Sesión</h2>
                     <Formik
-                        initialValues={{ email: '', password: '' }}
+                        initialValues={{ usuNombre: '', usuCotrasenna: '' }}
                         validate={values => {
                             const errors = {};
-                            errors.email = validateEmail(values.email);
-                            errors.password = validatePassword(values.password);
+                            errors.usuNombre = validateEmail(values.email);
+                            errors.usuCotrasenna = validatePassword(values.password);
                             return errors;
                         }}
                         onSubmit={handleSubmit}
                     >
                         {({ isSubmitting }) => (
                             <Form className="formulario1">
-                                <Field name="email">
+                                <Field name="usuNombre">
                                     {({ field }) => (
                                         <div>
                                             <TextField
@@ -57,7 +57,7 @@ export default function Login() {
                                         </div>
                                     )}
                                 </Field>
-                                <Field name="password">
+                                <Field name="usuCotrasenna">
                                     {({ field }) => (
                                         <div>
                                             <TextField
@@ -84,10 +84,11 @@ export default function Login() {
                                     color="secundario"
                                     disabled={isSubmitting}
                                     fullWidth
-                                    style={{ color: '#07384b', marginTop: '30px' , width: '60%'}} // Cambia el color del texto aquí
+                                    style={{ color: '#07384b' ,marginTop: '25px' , width: '60%'}} // Cambia el color del texto aquí
                                 >
                                     Ingresar
                                 </Button>
+                                <h3>¿No tienes Cuenta? <Link to="/registro">Registrate</Link></h3>
                             </Form>
                         )}
                     </Formik>
